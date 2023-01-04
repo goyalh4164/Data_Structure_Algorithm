@@ -1,0 +1,6 @@
+we can find the path between the two vertices by using 
+
+1) "haspath(v1,v2)" but it has T.C order for each vertex in 
+O(V+E) and in w.c no. of edges can be V(pow2) so it is not good complexity wise
+
+2)"Union-find" algorithm maintains a array of parents ..it has complexity of O(V) only much better than has_path
