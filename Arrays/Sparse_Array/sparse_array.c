@@ -4,15 +4,15 @@
 
 void main()
 {
-    static int array[10][10];
     int i, j, m, n;
     int counter = 0;
 
-    printf("\nEnter the total number of rows & Columns for 2D Matrix.\n");
+    printf("\ntotal number of rows & Columns for 2D Matrix.\n");
     printf("Rows : ");
     scanf("%d", &m);
-    printf("Columns : ");
+    printf("Cols : ");
     scanf("%d", &n);
+    int array[m][n];
 
     printf("Enter %d Elements of the matix: \n",m*n);
     for(i=0; i<m; i++)
@@ -37,26 +37,12 @@ void main()
         printf("\n");
     }
 
-    // Checking the Entered Matrix is a Sparse Matrix or Not?
+    
     if (counter > ((m * n) / 2))
     {
         printf("\nEntered matrix is a Sparse matrix.\n");
         printf("Reason : There are %d number of zeroes out of %d Elements.\n", counter,m*n);
-
-        // Finding Non-Zero Elements, to get No. of Columns in the Sparse Array.
-        int s = 0;
-        for (int i = 0; i < m; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                if (array[i][j] != 0)
-                {
-                    s++;
-                }
-            }
-        }
-
-        // Inserting Values in the Sparse Array.
+        int s = (m*n) - counter;
         int k = 0;
         int sparseArray[3][s];
         for (int i = 0; i < m; i++)
@@ -82,10 +68,12 @@ void main()
             }
             printf("\n");
         }
+        printf("Thanks Program By Harsh Goyal");
     }
     else
     {
-        printf("The given matrix is not a sparse matrix \n");
-        printf("Reason : There are %d number of zeroes out of %d Elements.", counter,m*n);
+        printf("not a sparse matrix \n");
+        printf("There are %d number of zeroes out of %d Elements.", counter,m*n);
+        printf("Thanks Program By Harsh Goyal");
     }    
 }
