@@ -42,7 +42,7 @@ void main()
     {
         printf("\nEntered matrix is a Sparse matrix.\n");
         printf("Reason : There are %d number of zeroes out of %d Elements.\n", counter,m*n);
-        int s = (m*n) - counter;
+        int s = (m*n) - counter; //total no. of non zero elements
         int k = 0;
         int sparseArray[3][s];
         for (int i = 0; i < m; i++)
@@ -62,6 +62,7 @@ void main()
         printf("\nSPARSE ARRAY : \n");
         for (int i = 0; i < 3; i++)
         {
+            
             for (int j = 0; j < s; j++)
             {
                 printf("%d ", sparseArray[i][j]);
