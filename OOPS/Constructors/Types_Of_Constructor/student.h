@@ -21,7 +21,7 @@ class Student{
         cout<<"Parameritized Constructor two called"<<endl;
         //"this" keyword holds the address of the current object
         //this keyword points to the current object from which the constructor is called
-        cout<<"Address of the object for which the constructor is called :"<<(this)<<endl;
+        
         this->rollNumber=rollNumber;
         this->age=age;
     }
