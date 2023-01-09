@@ -16,16 +16,11 @@ int main()
     try
     {
         z=division(x,y);
-        cut<<z<<endl;
+        cout<<z<<endl;
     }
     catch(const char * msg){
         //cerr means character error
         cerr<<msg<<endl;
     }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    
     return 0;
 }
